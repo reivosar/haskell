@@ -1,1 +1,3 @@
-# project-for-practice
+# 本プロジェクトについて
+
+Haskellの文法を学ぶためのプロジェクト。
