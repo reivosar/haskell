@@ -29,9 +29,19 @@ a'4 x    = x + 3
 b'4 x y  = x * y
 mix'4     = (a'4.) . b'4
 
+-- (5) 引数の型も数も異なる場合
+-- 合成後は、後ろから処理が行われるという理解をしていれば
+-- 問題なさそう。簡潔に書けてカッコいい。
+a'5 :: Int -> Int
+a'5 x    = x + 3
+b'5 :: String -> String -> Int
+b'5 x y  = (read x :: Int) * (read y :: Int)
+mix'5    = (a'5.) . b'5
+
 main :: IO ()
 main = do
-     print(mix'1 1)   -- 5
-     print(mix'2 3)   -- "Result:9"
-     print(mix'3 5)   -- 15
-     print(mix'4 7 2) -- 17
+     print(mix'1 1)       -- 5
+     print(mix'2 3)       -- "Result:9"
+     print(mix'3 5)       -- 15
+     print(mix'4 7 2)     -- 17
+     print(mix'5 "9" "4") -- 39
