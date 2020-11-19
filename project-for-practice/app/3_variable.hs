@@ -3,6 +3,8 @@ module Main where
 import Lib
 
 -- グローバル変数
+-- 変数を値に結びつけることを，束縛する (binding) と言う。
+-- 代入するとは言わないので注意。
 global_bool   = True
 global_char   = 'G'
 global_string = "Global" 
