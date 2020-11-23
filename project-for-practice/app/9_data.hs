@@ -19,6 +19,8 @@ main = do
     -- 以下のように書くと、状態を持ってしまう。
     -- ただし、各メソッドの戻り値をunitにすると、イベント発行の
     -- 遅延実行が難しいような気がする。
+    -- そもそもp.changeName (PersonName "ChangeName") ように
+    -- 書きたいのだが、出来ないような気がする(要調査)
     print $ p
     let p' = changeName p (PersonName "ChangeName") 
     print $ p'
