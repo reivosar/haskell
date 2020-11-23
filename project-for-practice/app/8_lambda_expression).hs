@@ -6,6 +6,7 @@ add = \x  -> \y -> x + y
 -- 当然「add x y = x + y」のようにも書ける
 
 -- 高階関数
+-- 関数を引数に取る記述方法。このコードは意味なし。
 higher_order_function func x y = func x y
 
 -- map関数
