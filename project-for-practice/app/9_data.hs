@@ -9,10 +9,10 @@ data Age        = Age        { ageValue :: Int}  deriving (Show, Eq)
 data Sex        = Male | Famele | Other deriving (Show, Eq)
 
 changeName :: Person -> PersonName -> Person
-changeName p name = p { personName = name }
+changeName p personName = Person { personName = personName, age = (age p), sex = (sex p) }
 
 changeAge :: Person -> Age -> Person
-changeAge p age = p { age = age }
+changeAge p age = Person { personName = (personName p), age = age, sex = (sex p) }
 
 main :: IO ()
 main = do
