@@ -26,7 +26,7 @@ toStringDayOfTheWeek arg =
                 5 -> "Friday"
                 6 -> "Saturday"
                 7 -> "Sunday"
-                _ -> error "Illegal Aragument")
+                _ -> error "Illegal Argument")
 
 (year, month, day) = (2020, 11, 21)
 

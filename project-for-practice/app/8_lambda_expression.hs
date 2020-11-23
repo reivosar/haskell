@@ -14,7 +14,7 @@ higher_order_function func x y = func x y
 --  [x * g | x <- xs]
 map_function xs g = map (* g) xs
 
--- filter関数(右畳み込み)
+-- filter関数
 -- 下記と同じ動きをする
 -- [x | x <- xs, x < g]
 filter_function = \xs g -> filter (< g) xs
@@ -26,7 +26,7 @@ filter_function = \xs g -> filter (< g) xs
 -- これは通常のループを想像するとわかりやすい
 foldl_function xs = foldl (-) 0 xs  
 
--- foldr関数
+-- foldr関数(右畳み込み)
 -- 以下のように配列の中身が処理される。
 -- 1-(2-(3-(4-(5-0))))) 
 -- 要は1-2+3-4+5と計算したのと同じ
