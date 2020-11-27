@@ -1,1 +1,4 @@
-<h1>とりあえずYesod
+$newline never
+$doctype 5
+<h3>#{title}
+<a href=@{HomeR}>トップページへのリンク</a>

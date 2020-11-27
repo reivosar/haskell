@@ -6,4 +6,7 @@ module Handler.Sample where
 import Import
 
 getSampleR :: Handler Html
-getSampleR = defaultLayout $(widgetFile "sample")
+getSampleR = do
+    let
+        title = "これはサンプルです。" :: Text
+    defaultLayout $(widgetFile "sample")
