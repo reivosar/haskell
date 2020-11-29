@@ -3,11 +3,11 @@ module Main where
 import Lib
 
 fizzbuzz :: Int -> String
-fizzbuzz i 
-    | (mod i 15) == 0 = "FizzBuzz"
-    | (mod i 3)  == 0 = "Fizz"
-    | (mod i 5)  == 0 = "Buzz"
-    | otherwise       = (show i)
+fizzbuzz n = case (mod n 3, mod n 5) of
+        (0,0) -> "FizzBuzz"
+        (0,_) -> "Fizz"
+        (_,0) -> "Buzz"
+        _     -> (show n)
 
 main :: IO ()
 main = mapM_ (putStrLn . fizzbuzz) [1..100]
