@@ -10,4 +10,4 @@ fizzbuzz i
     | otherwise       = (show i)
 
 main :: IO ()
-main = print $ map (fizzbuzz) [1..100]
+main = mapM_ (putStrLn . fizzbuzz) [1..100]
