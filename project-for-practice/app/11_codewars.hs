@@ -18,10 +18,10 @@ solution number = sum $ filter (\n -> (mod n 3 == 0) || (mod n 5 == 0)) [1..numb
 -- の配列を返します。数値が素数の場合は、文字列 '(integer) is prime'(C#ではnull) を返します 
 divisors :: (Show a, Integral a) => a -> Either String [a]
 divisors a 
-    | null result = Left ((show a) ++ " is prime")
-    | otherwise = Right result
+    | null result = Left  ((show a) ++ " is prime")
+    | otherwise   = Right result
     where
-        result = filter (\n -> (mod a n == 0)) [2..(a - 1)]
+        result    = filter (\n -> (mod a n == 0)) [2..(a - 1)]
 
 -- ■ 問題3
 -- 文字列に同じ量の 'x' と 'o' があるかどうかをチェックします。このメソッドはブール値を返し、
@@ -30,8 +30,8 @@ xo :: String -> Bool
 xo str = x_count == o_count
     where
         count char = length . filter ((==) char . toLower)
-        x_count = count 'x' str
-        o_count = count 'o' str
+        x_count    = count 'x' str
+        o_count    = count 'o' str
 
 main :: IO()
 main = print 1
