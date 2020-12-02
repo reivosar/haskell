@@ -2,6 +2,8 @@ module Main where
 
 import Lib
 import Data.Char
+import Data.Array
+import Data.List
 
 -- codewarsの問題解答
 -- Link https://www.codewars.com/
@@ -32,6 +34,19 @@ xo str = x_count == o_count
         count char = length . filter ((==) char . toLower)
         x_count    = count 'x' str
         o_count    = count 'o' str
+
+-- ■ 問題4
+-- 整数を可能な限り最大の値に並べ替える関数を書く。
+-- 冗長に書くと以下のようになる。
+superSize :: Integer -> Integer
+superSize n = result 
+    where
+        sorted_array = sortBy (flip compare) $ map (\x -> read (x:[]) :: Integer) (show n)
+        result = read $ concat $ map (show) sorted_array :: Integer
+-- ベストな書き方は下記。
+-- superSize n = read $ reverse $ sort $ show n
+-- もしくは
+-- superSize = read . reverse . sort . show
 
 main :: IO()
 main = print 1
