@@ -2,7 +2,6 @@ module Main where
 
 import Lib
 import Data.Char
-import Data.Array
 import Data.List
 
 -- codewarsの問題解答
@@ -46,7 +45,7 @@ superSize n = result
 -- ベストな書き方は下記。
 -- superSize n = read $ reverse $ sort $ show n
 -- もしくは
--- superSize = read . reverse . sort . show
+-- superSize = read . reverse . sort . show 
 
 main :: IO()
-main = print 1
+main = print $ accum "ab"
