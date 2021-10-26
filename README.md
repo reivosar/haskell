@@ -41,13 +41,3 @@ stack upgrade
 
     ・Haskell Syntax Highlighting  
     ・haskell-ghcid  
-
-# Java民がHaskellを学ぶことについて
-
-Haskellには言語的な制約がある。
-- for文がない（繰り返しの処理は再起） 
-- ひとつの変数に値を設定できるのは1回だけ 
-- 状態を持たせることができない など 
-
-Haskellはある論理を最小限の文法と最大限の制約で表すことができる言語である。
-この言語を学ぶことは、物事の本質を学ぶことであると思う。
