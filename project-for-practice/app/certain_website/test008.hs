@@ -4,7 +4,6 @@ import Lib
 import Data.Char
 import Data.List
 
--- ■ 問題4
 -- 整数を可能な限り最大の値に並べ替える関数を書く。
 -- 冗長に書くと以下のようになる。
 superSize :: Integer -> Integer
